@@ -1,23 +1,29 @@
 package com.Bridgelabs.LinkedList;
 
-public class MyNode<K> {
-	private K key;
-	private MyNode next;
-	
-	public MyNode(K key) {
-		this.key = key;
-		this.next = null;
-		
-	}
-	/**
-	 * 
-	 * creating getters and setters 
-	 */
-	public MyNode getNext() {
-		return next;
-	}
+public class MyNode<K> implements INode<K> {
+    private K key;
+    private INode next;
 
-	public void setNext(MyNode next) {
-		this.next = next;
-	}
+    public MyNode(K key) {
+        this.key = key;
+        this.next = null;
+    }
+
+    @Override
+    public K getKey() {
+        return key;
+    }
+
+    @Override
+    public void setKey(K key) {
+        this.key = key;
+    }
+
+    public INode getNext() {
+        return next;
+    }
+
+    public void setNext(INode next) {
+        this.next = (MyNode<K>) next;
+    }
 }

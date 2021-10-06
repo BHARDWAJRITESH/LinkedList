@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class MyNodeTest {
 	@Test
-	public void simpleLinkedListTest() {
+	public void given3NumberAdded2LinkListToTop() {
 		MyNode<Integer> firstNode = new MyNode<>(56);
 		MyNode<Integer> secondNode = new MyNode<>(30);
 		MyNode<Integer> thirdNode = new MyNode<>(70);
