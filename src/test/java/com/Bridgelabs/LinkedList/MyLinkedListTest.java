@@ -6,18 +6,18 @@ import org.junit.Test;
 public class MyLinkedListTest {
     @Test
     public void given3NumberAdded2LinkListToTop(){
-        MyNode<Integer> firstNode = new MyNode<>(70);
+        MyNode<Integer> firstNode = new MyNode<>(56);
         MyNode<Integer> secondNode = new MyNode<>(30);
-        MyNode<Integer> thirdNode = new MyNode<>(56);
+        MyNode<Integer> thirdNode = new MyNode<>(70);
 
         MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.add(firstNode);
-        myLinkedList.add(secondNode);
-        myLinkedList.add(thirdNode);
+        myLinkedList.append(secondNode);
+        myLinkedList.append(thirdNode);
         myLinkedList.printMyNodes();
 
-        boolean result = myLinkedList.head.equals(thirdNode) && myLinkedList.head.getNext().equals(secondNode)
-        		&& myLinkedList.tail.equals(firstNode);
+        boolean result = myLinkedList.head.equals(firstNode) && myLinkedList.head.getNext().equals(secondNode)
+        		&& myLinkedList.tail.equals(thirdNode);
 
         Assert.assertTrue(result);
     }
